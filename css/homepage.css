@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Alexandria;
+  src: url("./assets/fonts/Alexandria/static/Alexandria-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-light;
+  src: url("./assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
 /*CSS para la página principal*/
 #destacados1 section {
   width: 100%;
