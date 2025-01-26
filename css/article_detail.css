@@ -1,0 +1,257 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#extra-web {
+  display: none;
+}
+
+.principal img {
+  padding: 0.2em 0;
+}
+
+.principal img, textarea {
+  max-width: calc(100vW - 3em);
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  padding-top: 1em;
+}
+
+.entradilla {
+  font-style: italic;
+  padding: 0.5em 0 0 0;
+}
+
+p {
+  padding: 0.5em 0;
+}
+
+.marcador p {
+  padding-top: 0.2em;
+}
+
+#partido {
+  width: 95%;
+  text-align: center;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 2.5%;
+  border: 3px solid var(--dark_blue);
+  border-radius: 20px;
+}
+
+table {
+  margin: 1em 0;
+  border: 0px;
+  width: 95%;
+}
+
+#partido img {
+  height: 40px;
+}
+
+th {
+  padding: 1em 0;
+}
+
+th, td {
+  font-size: 20px;
+}
+
+.resultado-final {
+  color: var(--dark_blue);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#partido button {
+  background-color: var(--orange);
+  padding: 1em 3em;
+  border: 3px solid var(--dark_blue);
+  border-radius: 20px;
+  margin: 0 20px;
+  font-weight: bolder;
+  color: var(--dark_blue);
+  box-shadow: 5px 5px 10px var(--dark_blue);
+  cursor: pointer;
+}
+
+#stats img{
+  height: 80px;
+}
+
+#stats img:hover, input[type="submit"]:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#stats td {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--dark_blue);
+}
+
+.comentarios {
+  margin-bottom: 2em;
+}
+
+.comentarios p {
+  padding: 0.1em;
+}
+
+input[type="submit"] {
+  background-color: var(--orange);
+  padding: 0.3em;
+  font-weight: bolder;
+  color: var(--dark_blue);
+  cursor: pointer;
+  border: 2px solid var(--dark_blue);
+  border-radius: 5px;
+  position: absolute;
+  right: 1em;
+}
+
+.tablet-pc {
+  padding-top: 1.5em;
+}
+
+.tablet-pc h2 {
+  padding: 0 0 1em 0;
+}
+
+textarea {
+  width: 100%;
+}
+
+#destacados2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0;
+}
+
+.tablet-pc a {
+  margin: 0.5em;
+}
+
+.tablet-pc img, .tablet-pc h2 {
+  width: calc(100vW - 6em);
+}
+
+/*TABLET*/
+@media (min-width: 577px) {
+  .principal {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .principal h1 {
+    order: 1;
+  }
+
+  .marcador {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tablet-pc {
+    padding-top: 0;
+  }
+
+  #destacados2 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  #destacados2 a {
+    width: 45%;
+  }
+
+  #destacados2 img, #destacados2 h2 {
+    width: 100%;
+  }
+}
+
+/*Pequeño ajuste para visualizar el marcador de manera distinta, aprovechando mejor el espacio*/
+@media (min-width: 900px) {
+  #partido {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #stats {
+    width: 90%;
+  }
+}
+
+/*DESKTOP*/
+@media (min-width: 1025px) {
+  main {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main section {
+    width: 70%;
+  }
+
+  .tablet-pc {
+    display: none;
+  }
+
+  #extra-web{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark_blue);
+    width: 25%;
+    align-items: center;
+    row-gap: 0;
+  }
+
+  #extra-web a {
+    padding-top: 0;
+    width: 90%;
+  }
+
+  #extra-web h2 {
+    padding: 0;
+  }
+
+  #extra-web h3 {
+    padding: 1em 0 0 0;
+  }
+
+  #extra-web h2, #extra-web h3 {
+    color: var(--orange);
+  }
+
+  #extra-web img {
+    width: 100%;
+  }
+
+  #extra-web div {
+    padding-top: 1em;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  img[alt="next-games"] {
+    width: 90%;
+    padding: 1em;
+  }
+
+  input[type="submit"] {
+    right: calc(100vW - 72%);
+  }
+}

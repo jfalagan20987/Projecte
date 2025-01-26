@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style_general.css">
+  <link rel="stylesheet" href="./css/commons.css">
+  <link rel="stylesheet" href="./css/homepage.css">
   <title>OKC Spain</title>
 </head>
 <body>
   <header>
-    <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
-    <img id="btn-menu" src="./img/icon-menu-button.svg" alt="menu">
+    <div id="inicio">
+      <a href="./index.html"><img src="./assets/img/logo.png" alt="logo"></a>
+      <h1>OKC Thunder SPAIN</h1>
+      <div id="search">
+        <input type="search" name="search" placeholder="Buscar..." autocomplete="off">
+        <button type="search" alt="search"><img src="./assets/img/search.png" alt="search"></button>
+      </div>
+    </div>
+    <img id="btn-menu" src="./assets/img/icon-menu-button.svg" alt="menu">
 
     <nav id="nav-header">
       <div id="btn-close">
-        <img src="./img/icon-close-menu.png" alt="close-menu">
+        <img src="./assets/img/icon-close-menu.png" alt="close-menu">
       </div>
 
       <ul>
@@ -21,10 +29,13 @@
           <a href="./index.html">Inicio</a>
         </li>
         <li>
-          <a href="./views/standings">Clasificaciones</a>
+          <a href="./views/standings.html">Clasificaciones</a>
         </li>
         <li>
-          <a href="./views/calendar">Calendario</a>
+          <a href="./views/stats.html">Estadísticas</a>
+        </li>
+        <li>
+          <a href="./views/calendar.html">Calendario</a>
         </li>
         <li>
           <a href="./views/history.html">Historia del equipo</a>
@@ -41,11 +52,15 @@
 
   <main>
     <section id="destacados1">
+      <!--Botón para slider (tablet) que no sé cómo aplicar-->
+      <!-- <button class="slider" type="button" alt="izquierda"><img src="./assets/img/izquierda.png" alt="izquierda"></button> -->
       <article>
-        <img src="./img/players/chet-holmgren-1.png" alt="chet-holmgren">
-        <h2>Chet, fuera 8-10 semanas</h2>
+        <a href="/views/article_detail.html">
+          <img src="./assets/img/players/shai-gilgeous-alexander-january-23-2025.jpg" alt="shai-54-jazz">
+          <h2>Un Shai de récord: 54 puntos</h2>
+        </a>
         <p>
-          El pívot, que tuvo una mala caída en una acción defensiva frente a Andrew Wiggins, estará alejado de las pistas por una fractura en la cadera.
+          La estrella de OKC superó su career-high para ganar a Utah en un partido más complicado de lo esperado.
         </p>
         <p class="autor">
           Josep Falagán
@@ -53,8 +68,10 @@
       </article>
       
       <article>
-        <img src="./img/players/isaiah-hartenstein.jpg" alt="isaiah-hartenstein">
-        <h2>Doble-doble en el estreno de Hartenstein</h2>
+        <a href="/views/article_detail.html">
+          <img src="./assets/img/players/isaiah-hartenstein.jpg" alt="isaiah-hartenstein">
+          <h2>Doble-doble en el estreno de Hartenstein</h2>
+        </a>
         <p>
           El flamante fichaje del verano pudo, por fin, debutar con su nuevo equipo y devolver tamaño a una pintura de OKC falta de altura. Impacto inmediato que se tradujo en victoria.
         </p>
@@ -62,106 +79,139 @@
           Josep Falagán
         </p>
       </article>
+       <!--Botón para slider (tablet) que no sé cómo aplicar-->
+      <!-- <button class="slider" type="button" alt="derecha"><img src="./assets/img/derecha.png" alt="derecha"></button> -->
     </section>
 
-    <section id="destacados2">
-      <article>
-        <img src="./img/players/jalen-williams.jpg" alt="jalen-williams">
-        <h2>
-          Jalen Williams, sobre jugar sin pívot: "No es excusa"
-        </h2>
-      </article>
-  
-      <article>
-        <img src="./img/players/mark-daigneault.jpeg" alt="mark-daigneault">
-        <h2>
-          Daigneault acota el problema de los tiros libres
-        </h2>
-      </article>
-    </section>
+    <!--Creo este div con esta clase para poder mover mejor los elementos cuando salga de la versión móvil-->
+    <!--Respecto a la parte 2, los titulares e imágenes son indénticas. Todo enlaza a la misma noticia de ejemplo-->
+    <div class="tablet-pc">
+      <section id="destacados2">
+        <article>
+          <a href="/views/article_detail.html">
+            <img src="./assets/img/players/jalen-williams.jpg" alt="jalen-williams">
+            <h2>
+              J. Williams, sobre jugar sin pívot: "No es excusa"
+            </h2>
+          </a>
+        </article>
+        
+        <article>
+          <a href="/views/article_detail.html">
+            <img src="./assets/img/players/mark-daigneault.jpg" alt="mark-daigneault">
+            <h2>
+              Daigneault acota el problema de las faltas
+            </h2>
+          </a>
+        </article>
+      </section>
 
-    <section id="partido">
-      <table>
-        <thead>
-          <tr>
-            <th>Equipos</th>
-            <th>1Q</th>
-            <th>2Q</th>
-            <th>3Q</th>
-            <th>4Q</th>
-            <th>FINAL</th>
-          </tr>
-        </thead>
+      <section id="extra-web">
+        <article>
+          <a href="/views/article_detail.html">
+            <img src="./assets/img/players/nba-cup-okc-court.png" alt="cup-court">
+            <h2>
+              Así luce la nueva cancha para la Copa NBA
+            </h2>
+          </a>
+        </article>
+        </a>
 
-        <tbody>
-          <tr>
-            <td>
-              <img src="./img/Team-logos/logo OKC.png" alt="OKC">
-            </td>
-            <td>21</td>
-            <td>26</td>
-            <td>23</td>
-            <td>39</td>
-            <td class="resultado-final">109</td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./img/Team-logos/portland-trail-blazers.png" alt="POR">
-            </td>
-            <td>23</td>
-            <td>21</td>
-            <td>25</td>
-            <td>30</td>
-            <td class="resultado-final">99</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div id="stats">
+        <article>
+          <a href="/views/article_detail.html">
+            <img src="./assets/img/players/thaksgiving-okc.jpg" alt="thaksgiving-okc">
+            <h2>
+              Día de Acción de Gracias con OKC
+            </h2>
+          </a>
+        </article>
+        </a>
+      </section>
+      
+      <!--Marcador actualizado al último partido (fecha: 26 de enero)-->
+      <section id="partido">
         <table>
+          <thead>
+            <tr>
+              <th>Equipos</th>
+              <th>1Q</th>
+              <th>2Q</th>
+              <th>3Q</th>
+              <th>4Q</th>
+              <th>FINAL</th>
+            </tr>
+          </thead>
+  
           <tbody>
             <tr>
-              <td>J. Williams</td>
-              <td>I. Hartenstein</td>
-              <td>J. Williams</td>
+              <td>
+                <img src="./assets/img/Team-logos/logo OKC.png" alt="OKC">
+              </td>
+              <td>34</td>
+              <td>28</td>
+              <td>21</td>
+              <td>32</td>
+              <td class="resultado-final">115</td>
             </tr>
             <tr>
               <td>
-                <img src="./img/stats/jalen-williams-stats.png" alt="jalen-williams-stats">
+                <img src="./assets/img/Team-logos/dallas-mavericks.png" alt="DAL">
               </td>
-              <td>
-                <img src="./img/stats/isaiah-hartenstein-stats.png" alt="isaiah-hartenstein-stats">
-              </td>
-              <td>
-                <img src="./img/stats/jalen-williams-stats.png" alt="jalen-williams-stats">
-              </td>
-            </tr>
-
-            <tr>
-              <td>30 PTS</td>
-              <td>14 REBS</td>
-              <td>8 ASTS</td>
+              <td>33</td>
+              <td>27</td>
+              <td>31</td>
+              <td>30</td>
+              <td class="resultado-final">121</td>
             </tr>
           </tbody>
         </table>
-        <a href="https://www.nba.com/game/por-vs-okc-0022400256?watchRecap=true" target="_blank"><button>VER RESUMEN</button></a>
-      </div>
-    </section>
+  
+        <div id="stats">
+          <table>
+            <tbody>
+              <tr>
+                <td>J. Williams</td>
+                <td>C. Wallace</td>
+                <td>J. Williams</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.nba.com/player/1631114/jalen-williams" target="_blank"><img src="./assets/img/stats/jalen-williams-stats.png" alt="jalen-williams-stats"></a>
+                </td>
+                <td>
+                  <a href="https://www.nba.com/player/1641717/cason-wallace" target="_blank"><img src="./assets/img/stats/cason-wallace-stats.png" alt="cason-wallace-stats"></a>
+                </td>
+                <td>
+                  <a href="https://www.nba.com/player/1631114/jalen-williams" target="_blank"><img src="./assets/img/stats/jalen-williams-stats.png" alt="jalen-williams-stats"></a>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>33 PTS</td>
+                <td>7 REBS</td>
+                <td>7 ASTS</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="https://www.nba.com/game/dal-vs-okc-0022400625%3Fwatch?watchRecap=true" target="_blank"><button>VER RESUMEN</button></a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <img src="./img/logo.png" alt="logo-footer">
+    <img src="./assets/img/logo.png" alt="logo-footer">
     <nav>
       <a href="">Política de privacidad</a>
       <a href="">Contacta</a>
     </nav>
     <nav>
-      <a href="https://www.x.com/" target="_blank"><img src="./img/twitter-logo.png" alt="twitter"></a>
-      <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram-logo.png" alt="instagram"></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook-logo.png" alt="facebook"></a>
+      <a href="https://www.x.com/" target="_blank"><img src="./assets/img/twitter-logo.png" alt="twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="./assets/img/instagram-logo.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="./assets/img/facebook-logo.png" alt="facebook"></a>
     </nav>
   </footer>
 
-  <script src="./index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

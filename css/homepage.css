@@ -1,0 +1,253 @@
+/*CSS para la página principal*/
+#destacados1 section {
+  width: 100%;
+}
+
+#destacados1 article {
+  text-align: center;
+  display: block;
+  margin: 0 1em 1em 1em;
+}
+
+#destacados1 h2, p {
+  text-align: left;
+}
+
+#destacados1 p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+#destacados1 p.autor {
+  font-size: 12px;
+  padding: 0.5em 0;
+  font-family: Roboto-light;
+}
+
+#destacados1 img{
+  width: 100%;
+}
+
+#destacados2 {
+  width: 100%;
+}
+
+#destacados2 h2{
+  font-size: 18px;
+}
+
+#destacados2 article{
+  width: 45%;
+  display: inline-block;
+  margin: 1em;
+}
+
+#destacados2 article:last-child{
+  position: absolute;
+  right: 0;
+}
+
+#destacados2 img {
+  width: 100%;
+}
+
+#partido {
+  width: 95%;
+  text-align: center;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 2.5%;
+  border: 3px solid var(--dark_blue);
+  border-radius: 20px;
+}
+
+table {
+  margin: 1em 0;
+  border: 0px;
+  width: 95%;
+}
+
+#partido img {
+  height: 40px;
+}
+
+th {
+  padding: 1em 0;
+}
+
+th, td {
+  font-size: 20px;
+}
+
+.resultado-final {
+  color: var(--dark_blue);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#partido button {
+  background-color: var(--orange);
+  padding: 1em 3em;
+  border: 3px solid var(--dark_blue);
+  border-radius: 20px;
+  margin: 0 20px;
+  font-weight: bolder;
+  color: var(--dark_blue);
+  box-shadow: 5px 5px 10px var(--dark_blue);
+  cursor: pointer;
+}
+
+#stats img{
+  height: 80px;
+}
+
+#stats img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#stats td {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--dark_blue);
+}
+
+#extra-web article{
+  display: none;
+}
+
+/*Adaptamos un par de elementos para dispositivos móviles con pantallas más estrechas*/
+@media (max-width: 450px) {
+  
+  #destacados2 article{
+    width: 40%;
+    display: inline-block;
+    margin: 1em;
+  }
+
+  #stats img{
+    height: 60px;
+  }
+
+}
+
+/*TABLET*/
+@media (min-width: 577px) {
+
+  #destacados1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #destacados1 article {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+  } 
+
+  #destacados1 p:not(.autor) {
+    display: none;
+  }
+
+  #destacados2 {
+    width: 35%;
+    margin-right: 0;
+  }
+
+  #destacados2 article {
+    width: 80%;
+    display: block;
+  }
+
+  #destacados2 article:last-child {
+    position: static;
+  }
+
+  #partido {
+    width: 58%;
+    margin-left: 0;
+  }
+
+  .tablet-pc section{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+}
+
+/*Para evitar que la sección del marcador quede muy abajo respecto a las noticias, aumentamos el tamaño de ciertos elementos*/
+@media (min-width: 800px) {
+
+  #stats img {
+    height: 100px;
+  }
+
+  #stats tr td {
+    padding: 0.2em 0;
+  }
+
+  #stats{
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 1025px) {
+  #destacados1 p:not(.autor) {
+    display: inherit;
+  }
+
+  #destacados1 section {
+    width: 100%;
+    margin: 0;
+  }
+
+  #destacados1 article {
+    width: 46%;
+  }
+
+  #destacados2 {
+    width: 20%;
+    margin-right: 0.5em;
+  }
+
+  #destacados2 article{
+    display: block;
+    width: 100%;
+  }
+
+  #extra-web {
+    width: 20%;
+  }
+
+  #extra-web article{
+    display: block;
+    width: 100%;
+    margin: 1em;
+  }
+
+  #extra-web img {
+    width: 100%;
+  }
+
+  #extra-web h2 {
+    font-size: 18px;
+  }
+
+  #partido {
+    width: 55%;
+    margin-left: 1em;
+  }
+
+  .tablet-pc {
+    display: inline-block;
+    margin-left: 2em;
+  }
+}
+
+/*Mismo suceso con el marcador que en la versión tablet*/
+@media (min-width: 1400px) {
+  #stats img{
+    height: 120px;
+  }
+}

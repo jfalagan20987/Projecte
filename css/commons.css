@@ -1,0 +1,251 @@
+/*Estilos comunes*/
+:root {
+  --dark_blue: #1A3660;
+  --light_blue: #A5DDEB;
+  --orange: #F58221;
+  --black: #000;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: Alexandria;
+  src: url("/assets/fonts/Alexandria/static/Alexandria-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-light;
+  src: url("/assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+* {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  color: var(--black);
+  list-style: none;
+  font-size: 16px;
+}
+
+
+h1, h2, h3 {
+  font-family: Alexandria;
+  color: var(--dark_blue);
+}
+
+header h1 {
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 1em;
+  color: var(--orange);
+  display: none;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p.autor {
+  font-size: 12px;
+  padding: 0.5em 0;
+  font-family: Roboto-light;
+}
+
+header, footer {
+  background-color: var(--dark_blue);
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 150;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+img[alt="logo"] {
+  height: 80px;
+}
+
+#btn-menu {
+  position: fixed;
+  left: 10px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#btn-close {
+  text-align: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+header nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dark_blue);
+  width: 200px;
+  box-shadow: 0 10px 1000px var(--dark_blue);
+  cursor: pointer;
+}
+
+.nav-visible {
+  display: block;
+}
+
+ul li a, nav a {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  /* color: var(--orange); */
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+header nav ul li {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+main {
+  padding: 1em;
+  width: 100%;
+  background-color: var(--light_blue);
+}
+
+footer {
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+}
+
+footer nav {
+  display: inline-block;
+  padding: 0 2em;
+}
+
+footer a {
+  font-size: 12px;
+  padding: 0 1em;
+}
+
+img[alt="logo-footer"] {
+  height: 50px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Logos RRSS*/
+footer img { 
+  height: 32px;
+}
+
+/*Elementos a ocultar*/
+.slider {
+  display: none;
+}
+
+#search {
+  display: none;
+}
+
+section article h2, section article img {
+  cursor: pointer;
+}
+
+section article h2:hover, button:hover, a:hover {
+  text-decoration: underline;
+}
+
+/*Adaptamos imágenes del marcador para pantallas muy pequeñas*/
+@media (max-width: 330px) {
+  #stats img {
+    max-height: 40px;
+  }
+}
+
+/*DESKTOP*/
+@media (min-width: 1025px) {
+
+  #btn-menu, #btn-close, .sublist{
+    display: none;
+  }
+
+  header nav {
+    text-align: center;
+    display: initial;
+    position: sticky;
+  }
+
+  #inicio a img, #inicio h1, #inicio #search {
+    display: inline-block;
+  }
+
+  img[alt="logo"] {
+    position: fixed;
+    left: 1.5em;
+    height: 120px;
+    padding-bottom: 0.3em;
+  }
+
+  #search {
+    position: fixed;
+    right: 2em;
+    top: 50px;
+  }
+
+  nav ul, nav ul li {
+    display: inline-block;
+    background-color: none;
+  }
+
+  #nav-header a{
+    font-size: 16px;
+  }
+
+  #search button img {
+    height: 20px;
+  }
+
+  #search button {
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    padding: 0.2em;
+  }
+
+  #search button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  #search input:focus {
+    outline: 1px solid var(--orange);
+  }
+
+}
