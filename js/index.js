@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 
   logoBtn.addEventListener("click", ()=>{
-    location.href = `..${BASE_URL}/index.html`;
+    location.href = `../index.html`;
   })
 
   //Enlaces menú
   menuInicio.addEventListener("click", ()=>{
-    location.href = `..${BASE_URL}/index.html`;
+    location.href = `../index.html`;
   })
   menuClasificaciones.addEventListener("click", ()=>{
     location.href = `..${BASE_URL}/views/clasificaciones.html`;
