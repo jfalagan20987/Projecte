@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const btnUnete = document.getElementById("unete");
 
   btnUnete.addEventListener("click", ()=>{
-    location.href = `../views/register.html`;
+    location.href = `..${BASE_URL}/views/register.html`;
   })
 
   //Funcionalidad tecla enter
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
       //Redirección
       if (usuarios.find(usuario => usuario.username === username && usuario.tipoUsuario === "admin")){
-        location.href = `../views/admin.html`;
+        location.href = `..${BASE_URL}/views/admin.html`;
       } else {
-        location.href = `../index.html`;
+        location.href = `..${BASE_URL}/index.html`;
       }
     }else{
       formMissatge[0].innerHTML = `<p class="error">El usuario y/o la contraseña no son correctos.</p>`;

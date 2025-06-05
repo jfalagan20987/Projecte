@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   btnLogout.addEventListener("click", ()=>{
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("username");
-    location.href = `../views/login.html`;
+    location.href = `..${BASE_URL}/views/login.html`;
   })
 });

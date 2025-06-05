@@ -1,3 +1,5 @@
+const BASE_URL = window.location.hostname === "127.0.0.1" ? "" : "/Projecte";
+
 document.addEventListener("DOMContentLoaded",()=>{
   const btnMenu = document.querySelector("#btn-menu");
   const navHeader = document.querySelector("#nav-header");
@@ -23,33 +25,33 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 
   logoBtn.addEventListener("click", ()=>{
-    location.href = `../index.html`;
+    location.href = `..${BASE_URL}/index.html`;
   })
 
   //Enlaces menú
   menuInicio.addEventListener("click", ()=>{
-    location.href = `../index.html`;
+    location.href = `..${BASE_URL}/index.html`;
   })
   menuClasificaciones.addEventListener("click", ()=>{
-    location.href = `../views/clasificaciones.html`;
+    location.href = `..${BASE_URL}/views/clasificaciones.html`;
   })
   menuEstadisticas.addEventListener("click", ()=>{
-    location.href = `../views/estadisticas.html`;
+    location.href = `..${BASE_URL}/views/estadisticas.html`;
   })
   menuCalendario.addEventListener("click", ()=>{
-    location.href = `../views/calendario.html`;
+    location.href = `..${BASE_URL}/views/calendario.html`;
   })
   menuHistoria.addEventListener("click", ()=>{
-    location.href = `../views/historia.html`;
+    location.href = `..${BASE_URL}/views/historia.html`;
   })
   menuAboutUs.addEventListener("click", ()=>{
-    location.href = `../views/aboutus.html`;
+    location.href = `..${BASE_URL}/views/aboutus.html`;
   })
   menuLogin.addEventListener("click", ()=>{
-    location.href = `../views/login.html`;
+    location.href = `..${BASE_URL}/views/login.html`;
   })
   menuRegister.addEventListener("click", ()=>{
-    location.href = `../views/register.html`;
+    location.href = `..${BASE_URL}/views/register.html`;
   })
 
   //Enlaces artículo
@@ -61,32 +63,32 @@ document.addEventListener("DOMContentLoaded",()=>{
   const readArticle6 = document.getElementById("articulo6");
   if(readArticle1){
     readArticle1.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
   if(readArticle2){
     readArticle2.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
   if(readArticle3){
     readArticle3.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
   if(readArticle4){
     readArticle4.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
   if(readArticle5){
     readArticle5.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
   if(readArticle6){
     readArticle6.addEventListener("click", ()=>{
-      location.href = `../views/article_detail.html`;
+      location.href = `..${BASE_URL}/views/article_detail.html`;
     })
   }
 
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     //Control usuario inactivo
     let timeout;
     function inactivo(){
-      location.href = `../views/login.html`;
+      location.href = `..${BASE_URL}/views/login.html`;
       alert("Sesión cerrada por inactividad.")
       localStorage.removeItem("loggedIn");
       localStorage.removeItem("username");
@@ -131,6 +133,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   menuLogout.addEventListener("click", ()=>{
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("username");
-    location.href = `../index.html`;
+    location.href = `..${BASE_URL}/index.html`;
   })
 })
