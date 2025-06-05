@@ -212,9 +212,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         //Redirección
         if (tipoUsuario === "admin"){
-          location.href = `..${BASE_URL}/views/admin.html`;
+          location.href = `../views/admin.html`;
         } else{
-          location.href = `..${BASE_URL}/index.html`;
+          location.href = `../index.html`;
         }
         
         formulari.reset();
