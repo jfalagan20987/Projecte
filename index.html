@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/commons.css">
   <link rel="stylesheet" href="./css/homepage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>OKC Spain</title>
 </head>
 <body>
   <header>
     <div id="inicio">
-      <a href="./index.html"><img src="./assets/img/logo.png" alt="logo"></a>
+      <a><img src="./assets/img/logo.png" alt="logo"></a>
       <h1>OKC Thunder SPAIN</h1>
       <div id="search">
         <input type="search" name="search" placeholder="Buscar..." autocomplete="off">
@@ -26,25 +27,31 @@
 
       <ul>
         <li>
-          <a href="./index.html">Inicio</a>
+          <a id="index">Inicio</a>
         </li>
         <li>
-          <a href="./views/standings.html">Clasificaciones</a>
+          <a id="clasificaciones">Clasificaciones</a>
         </li>
         <li>
-          <a href="./views/stats.html">Estadísticas</a>
+          <a id="estadisticas">Estadísticas</a>
         </li>
         <li>
-          <a href="./views/calendar.html">Calendario</a>
+          <a id="calendario">Calendario</a>
         </li>
         <li>
-          <a href="./views/history.html">Historia del equipo</a>
+          <a id="historia">Historia del equipo</a>
         </li>
         <li>
-          <a href="./views/about_us.html">Sobre nosotros</a>
+          <a id="aboutUs">Sobre nosotros</a>
         </li>
         <li>
-          <a href="./views/log_in.html">Iniciar sesión</a>
+          <a id="login">Iniciar sesión</a>
+        </li>
+        <li>
+          <a id="register">Registrarse</a>
+        </li>
+        <li>
+          <a id="logout">Cerrar sesión</a>
         </li>
       </ul>
     </nav>
@@ -54,8 +61,8 @@
     <section id="destacados1">
       <!--Botón para slider (tablet) que no sé cómo aplicar-->
       <!-- <button class="slider" type="button" alt="izquierda"><img src="./assets/img/izquierda.png" alt="izquierda"></button> -->
-      <article>
-        <a href="./views/article_detail.html">
+      <article id="articulo1">
+        <a>
           <img src="./assets/img/players/shai-gilgeous-alexander-january-23-2025.jpg" alt="shai-54-jazz">
           <h2>Un Shai de récord: 54 puntos</h2>
         </a>
@@ -67,8 +74,8 @@
         </p>
       </article>
       
-      <article>
-        <a href="./views/article_detail.html">
+      <article id="articulo2">
+        <a>
           <img src="./assets/img/players/isaiah-hartenstein.jpg" alt="isaiah-hartenstein">
           <h2>Doble-doble en el estreno de Hartenstein</h2>
         </a>
@@ -87,8 +94,8 @@
     <!--Respecto a la parte 2, los titulares e imágenes son indénticas. Todo enlaza a la misma noticia de ejemplo-->
     <div class="tablet-pc">
       <section id="destacados2">
-        <article>
-          <a href="./views/article_detail.html">
+        <article id="articulo3">
+          <a>
             <img src="./assets/img/players/jalen-williams.jpg" alt="jalen-williams">
             <h2>
               J. Williams, sobre jugar sin pívot: "No es excusa"
@@ -96,8 +103,8 @@
           </a>
         </article>
         
-        <article>
-          <a href="./views/article_detail.html">
+        <article id="articulo4">
+          <a>
             <img src="./assets/img/players/mark-daigneault.jpg" alt="mark-daigneault">
             <h2>
               Daigneault acota el problema de las faltas
@@ -107,8 +114,8 @@
       </section>
 
       <section id="extra-web">
-        <article>
-          <a href="./views/article_detail.html">
+        <article id="articulo5">
+          <a>
             <img src="./assets/img/players/nba-cup-okc-court.png" alt="cup-court">
             <h2>
               Así luce la nueva cancha para la Copa NBA
@@ -117,8 +124,8 @@
         </article>
         </a>
 
-        <article>
-          <a href="./views/article_detail.html">
+        <article id="articulo6">
+          <a>
             <img src="./assets/img/players/thaksgiving-okc.jpg" alt="thaksgiving-okc">
             <h2>
               Día de Acción de Gracias con OKC

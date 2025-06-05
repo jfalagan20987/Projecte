@@ -1,0 +1,31 @@
+button{
+  margin-top: 8px;
+}
+
+.cambiarForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cambiarForm p{
+  font-size: 12px;
+}
+
+.cambiarForm button{
+  background-color: var(--dark_blue);
+  color: var(--orange);
+  font-weight: bold;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  align-self: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cambiarForm button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
