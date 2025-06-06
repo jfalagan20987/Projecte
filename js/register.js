@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
   //Variables
   const formulari = document.getElementById("registro");
-   document.getElementById("registrar").classList.add("deshabilitado");
-
+  document.getElementById("registrar").classList.add("deshabilitado");
   const email = document.getElementById("email");
   const username = document.getElementById("username");
   const psswd = document.getElementById("psswd");
@@ -45,6 +44,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     }else{
       errorEmail.textContent = "";
       errores.email = false;
+      //Rellenar campo con nombre de usuario recomendado
+      username.value = email.value.trim().split("@")[0];
+      validarUsername();
     }
 
     habilitarSubmit();
@@ -144,6 +146,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   //   console.log(tipoUsuario);
   // }
 
+
   //Guardar tipo de usuario (he tenido que buscar cómo se hacía porque no era capaz)
   function seleccion(valor){
     tipoUsuario = valor;
@@ -178,9 +181,15 @@ document.addEventListener("DOMContentLoaded",()=>{
   //LOCAL STORAGE
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   
-  function yaExiste(email, username){
+  //Comprobar colisiones
+  function yaExisteEmail(email){
     return usuarios.some(usuario =>
-      usuario.email === email || usuario.username === username
+      usuario.email === email
+    );
+  }
+  function yaExisteUsuario(username){
+    return usuarios.some(usuario =>
+      usuario.username = username
     );
   }
 
@@ -188,17 +197,28 @@ document.addEventListener("DOMContentLoaded",()=>{
   formulari.addEventListener("submit", (e)=>{
     e.preventDefault();
 
+    //Si están todos los campos rellenados, se habilita el botón de registro...
     if (habilitarSubmit){
       const comprobarEmail = email.value;
       const comprobarUsername = username.value;
-      if (yaExiste(comprobarEmail, comprobarUsername)){
-        formCorrecto[0].innerHTML = `<p class="error">Usuario y/o email ya registrados</p>`;
+
+      if (yaExisteEmail(comprobarEmail)){
+        formCorrecto[0].innerHTML = `<p class="error">Email ya registrado</p>`;
         email.focus();
         formulari.classList.add("shake");
         formulari.addEventListener("animationend", () => {
           formulari.classList.remove("shake");
         }, { once: true });
-        errores.email = errores.username = true;
+        errores.email = true;
+        habilitarSubmit();
+      }else if(yaExisteUsuario(comprobarUsername)){
+        formCorrecto[0].innerHTML = `<p class="error">Usuario ya registrado</p>`;
+        username.focus();
+        formulari.classList.add("shake");
+        formulari.addEventListener("animationend", () => {
+          formulari.classList.remove("shake");
+        }, { once: true });
+        errores.username = true;
         habilitarSubmit();
       }else{
         const nuevoUsuario = {email: comprobarEmail, username: comprobarUsername, psswd: psswd.value, tipo: tipoUsuario};

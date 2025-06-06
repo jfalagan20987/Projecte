@@ -2,6 +2,7 @@ button{
   margin-top: 8px;
 }
 
+/*Contenedor para ir al formulario de registro*/
 .cambiarForm{
   display: flex;
   flex-direction: column;

@@ -1,3 +1,4 @@
+//BASE_URL necesario para funcionamiento en GitHub
 const BASE_URL = window.location.hostname === "127.0.0.1" ? "" : "/Projecte";
 document.addEventListener("DOMContentLoaded",()=>{
   const btnMenu = document.querySelector("#btn-menu");
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     location.href = `..${BASE_URL}/views/register.html`;
   })
 
-  //Enlaces artículo
+  //Enlaces artículo (solo un click sobre el titular o la imagen abrirán el artículo)
   const readArticle1 = document.querySelectorAll("#articulo1 a, #articulo1 img.imgTitular");
   const readArticle3 = document.querySelectorAll("#articulo3 a", "#articulo3 img.imgTitular");
   const readArticle4 = document.querySelectorAll("#articulo4 a", "#articulo4 img.imgTitular");
@@ -129,6 +130,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     //   document.addEventListener(event, reiniciarTemporizador())
     // );
 
+    //Eventos que reinician el temporizador
     document.addEventListener("click", ()=>(reiniciarTemporizador()));
     document.addEventListener("mousemove", ()=>(reiniciarTemporizador()));
     document.addEventListener("scroll", ()=>(reiniciarTemporizador()));
@@ -173,7 +175,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
     likeBtn.addEventListener("click", () => {
-      console.log(`Click en like del artículo: ${articleId}`);
       if (!usuarioLogueado) {
         return;
       }
