@@ -116,6 +116,53 @@ th, td {
   display: none;
 }
 
+/*LIKE*/
+.titular-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.enlaceTitular{
+  flex: 1;
+  margin: 0;
+}
+
+.likeBtn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.likeBtn:hover{
+  transform: translateY(-15%) scale(1.1);
+  opacity: 1;
+}
+
+.likeBtn img {
+  height: 18px;
+  width: 18px;
+}
+
+.likeChecked{
+  display: none;
+}
+
+.likeCounter {
+  font-size: 14px;
+  color: var(--dark_blue);
+}
+
+/* .likeCounter:hover{
+  text-decoration: none;
+} */
+
 /*Adaptamos un par de elementos para dispositivos móviles con pantallas más estrechas*/
 @media (max-width: 450px) {
   
